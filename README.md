@@ -1,7 +1,7 @@
 WP GraphQL Meta Box Custom Fields
 ===============
 
-This plugin is an add-on for the awesome [WP GraphQL][wp-graphql] & [a WordPress custom fields and custom meta boxes][metabox.io]
+This plugin is an add-on for the awesome [WP GraphQL][wp-graphql] & [WordPress custom fields and custom meta boxes][metabox.io]
 
 It builds on top of WP GraphQL and adds all registered metaboxes to the WP GraphQL Endpoint.
 

@@ -172,11 +172,6 @@ if (!class_exists('\WPGraphQL\Extensions\MB')) {
             $meta_boxes = \rwmb_get_registry('meta_box')->get_by([
                 'object_type' => 'term',
             ]);
-            foreach ($meta_boxes as $key => $meta_box) {
-                if (!in_array($type, $meta_box->taxonomies, true)) {
-                    unset($meta_boxes[$key]);
-                }
-            }
 
             return $meta_boxes;
         }
@@ -193,11 +188,6 @@ if (!class_exists('\WPGraphQL\Extensions\MB')) {
             $types = get_post_types([], 'objects');
             if ('taxonomy' === $type) {
                 $types = get_taxonomies([], 'objects');
-            }
-            foreach ($types as $type => $object) {
-                if (empty($object->show_in_rest)) {
-                    unset($types[$type]);
-                }
             }
 
             return $types;
